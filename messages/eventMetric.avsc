@@ -1,0 +1,21 @@
+{
+  "type": "record",
+  "name": "eventMetric",
+  "fields": [
+    {
+      "name": "timestamp",
+      "type": "int",
+      "doc": "when the event happened"
+    },
+    {
+      "name": "eventName",
+      "type": "string",
+      "doc": "Name of the event"
+    },
+    {
+      "name": "value",
+      "type": "string",
+      "doc": "Value for the event"
+    }
+  ]
+}
