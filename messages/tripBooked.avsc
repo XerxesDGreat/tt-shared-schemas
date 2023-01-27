@@ -1,0 +1,26 @@
+{
+  "type": "record",
+  "name": "tripBooked",
+  "fields": [
+    {
+      "name": "startDate",
+      "type": "string",
+      "doc": "Date the trip starts"
+    },
+    {
+      "name": "endDate",
+      "type": "string",
+      "doc": "Date the trip ends"
+    },
+    {
+      "name": "guestId",
+      "type": "int",
+      "doc": "Id of the guest who created the booking"
+    },
+    {
+      "name": "vehicleId",
+      "type": "int",
+      "doc": "Id of the vehicle being booked"
+    }
+  ]
+}
