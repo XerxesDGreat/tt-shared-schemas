@@ -16,6 +16,11 @@
       "name": "value",
       "type": "string",
       "doc": "Value for the event"
+    },
+    {
+      "name": "context",
+      "type": "string",
+      "doc": "Context of the event"
     }
   ]
 }
