@@ -1,0 +1,227 @@
+{
+  "type": "record",
+  "name": "DataEngineeringBackendEvent",
+  "fields": [
+    {
+      "name": "id",
+      "type": "string"
+    },
+    {
+      "name": "correlationId",
+      "type": "string"
+    },
+    {
+      "name": "causationId",
+      "type": "string"
+    },
+    {
+      "name": "source",
+      "type": "string"
+    },
+    {
+      "name": "eventName",
+      "type": "string"
+    },
+    {
+      "name": "payloadSchemaName",
+      "type": "string",
+      "default": "VehicleSearchBackendEventSchema"
+    },
+    {
+      "name": "payloadSchemaVersion",
+      "type": "string",
+      "default": "1.0.0"
+    },
+    {
+      "name": "payloadTimestamp",
+      "type": "string"
+    },
+    {
+      "name": "payload",
+      "type": {
+        "type": "record",
+        "name": "PmmlScoresBackendEventV10",
+        "fields": [
+          {
+            "name": "sessionId",
+            "type": [
+              "null",
+              "string"
+            ],
+            "default": null
+          },
+          {
+            "name": "userId",
+            "type": "string"
+          },
+          {
+            "name": "driverId",
+            "type": [
+              "null",
+              "string"
+            ],
+            "default": null
+          },
+          {
+            "name": "anonymousId",
+            "type": [
+              "null",
+              "string"
+            ],
+            "default": null
+          },
+          {
+            "name": "userAgent",
+            "type": [
+              "null",
+              "string"
+            ],
+            "default": null
+          },
+          {
+            "name": "eventTimestamp",
+            "type": "string"
+          },
+          {
+            "name": "timezone",
+            "type": "string"
+          },
+          {
+            "name": "version",
+            "type": "string"
+          },
+          {
+            "name": "properties",
+            "type": {
+              "type": "record",
+              "name": "Properties",
+              "fields": [
+                {
+                  "name": "searchId",
+                  "type": [
+                    "null",
+                    "string"
+                  ],
+                  "default": null
+                },
+                {
+                  "name": "DSModelVersion",
+                  "type": "string"
+                },
+                {
+                  "name": "scores",
+                  "type": {
+                    "type": "array",
+                    "items": {
+                      "type": "record",
+                      "name": "Score",
+                      "fields": [
+                        {
+                          "name": "order",
+                          "type": {
+                            "type": "int",
+                            "java-class": "java.lang.Integer"
+                          }
+                        },
+                        {
+                          "name": "pApproval",
+                          "type": [
+                            "null",
+                            {
+                              "type": "double",
+                              "java-class": "java.lang.Double"
+                            }
+                          ],
+                          "default": null
+                        },
+                        {
+                          "name": "score",
+                          "type": {
+                            "type": "double",
+                            "java-class": "java.lang.Double"
+                          }
+                        },
+                        {
+                          "name": "vehicleId",
+                          "type": {
+                            "type": "long",
+                            "java-class": "java.lang.Long"
+                          }
+                        },
+                        {
+                          "name": "model",
+                          "type": {
+                            "type": "record",
+                            "name": "Model",
+                            "fields": [
+                              {
+                                "name": "modelType",
+                                "type": "string"
+                              },
+                              {
+                                "name": "inputs",
+                                "type": {
+                                  "type": "record",
+                                  "name": "ModelInputs",
+                                  "fields": [
+                                    {
+                                      "name": "rank",
+                                      "type": "int"
+                                    },
+                                    {
+                                      "name": "rating",
+                                      "type": "double"
+                                    },
+                                    {
+                                      "name": "tripCount",
+                                      "type": "int"
+                                    },
+                                    {
+                                      "name": "searchContextAverageDailyPrice",
+                                      "type": "double"
+                                    },
+                                    {
+                                      "name": "analyticsReferencePrice",
+                                      "type": "double"
+                                    },
+                                    {
+                                      "name": "tmv",
+                                      "type": "double"
+                                    },
+                                    {
+                                      "name": "searchContextAirportDeliveryFee",
+                                      "type": "double"
+                                    },
+                                    {
+                                      "name": "searchContextDistanceInKilometers",
+                                      "type": "double"
+                                    },
+                                    {
+                                      "name": "dailyMileage",
+                                      "type": "double"
+                                    }
+                                  ]
+                                }
+                              },
+                              {
+                                "name": "output",
+                                "type": {
+                                  "type": "double",
+                                  "java-class": "java.lang.Double"
+                                }
+                              }
+                            ]
+                          }
+                        }
+                      ]
+                    }
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      }
+    }
+  ]
+}
